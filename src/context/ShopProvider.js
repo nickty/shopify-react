@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Client from 'shopify-buy'
+import Shop from '../pages/Shop'
 
 const client = Client.buildClient({
     storefrontAccessToken: process.env.REACT_APP_ACCESS_TOKEN,
@@ -22,9 +23,7 @@ const ShopProvider = () => {
     }
 
     return (
-        <div>
-            {products.length}
-        </div>
+       <Shop products={products} />
     )
 }
 
